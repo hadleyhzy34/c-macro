@@ -1,7 +1,10 @@
 CC=g++
 
-main2: Points.o MovablePoints.o main2.o
-	g++ Points.o MovablePoints.o main2.o -o main2
+main1: Points.o main1.o
+	g++ Points.o main1.o -o main1
+
+main2: main2.o Points.o MovablePoints.o
+	g++ main2.o Points.o MovablePoints.o -o main2
 
 Points.o: Points.cpp
 	g++ -c Points.cpp
